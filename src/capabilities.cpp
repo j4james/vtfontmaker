@@ -58,6 +58,7 @@ capabilities::~capabilities()
         vtout.sm('?', 112);
     else if (_original_decrpl == false)
         vtout.rm('?', 112);
+    vtout.flush();
 }
 
 std::optional<bool> capabilities::query_mode(const int mode) const
