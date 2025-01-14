@@ -942,9 +942,9 @@ int dialog::show()
     static int page = 1;
     page++;
 
+    vtout.deccra(_top, _left, {}, {}, 1, _top, _left, page);
     vtout.decstbm(_top, _bottom);
     vtout.decslrm(_left, _right);
-    vtout.deccra({}, {}, {}, {}, 1, {}, {}, page);
     vtout.decinvm(macros::draw_frame());
 
     vtout.cup({}, int(screen_width - _title.length()) / 2 + 2 - _left);
