@@ -70,7 +70,7 @@ int main(int argc, const char* argv[])
     for (int i = 1; i < argc; i++) {
         auto arg = std::string{argv[i]};
         if (!arg.starts_with("-")) {
-            start_path = arg;
+            start_path = std::filesystem::current_path().append(arg);
             break;
         }
     }
