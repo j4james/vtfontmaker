@@ -54,6 +54,4 @@ soft_font::~soft_font()
 {
     // Make sure the ASCII character set is restored on exit.
     vtout.scs(1, "B");
-    // Also erase the font buffers on exit.
-    vtout.dcs("0;0;2{ @");
 }
